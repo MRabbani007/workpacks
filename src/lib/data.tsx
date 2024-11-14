@@ -70,7 +70,7 @@ export const INDUSTRY_GENERAL_KNOWLEDGE: ACCORDION_ITEM[] = [
   },
 ];
 
-export const WORKPACKS_FAQ: ACCORDION_ITEM[] = [
+export const WORKPACKS_FAQ = [
   {
     title: "Where does WorkPacks come from?",
     content: (
@@ -158,4 +158,158 @@ export const SOLUTION_ITEMS = [
       "Serves as the nerve centerfor AWP insights. Offers dynamic AWP dashboards, performance KPIs, and visual reports through S-curves, Skyline reports, and status visualizations for effective oversight, ensuring productivity and progress are always in focus.",
     image: "/analyze.webp",
   },
+];
+
+export const MARKETS = [
+  {
+    title: "Green Hydrogen Projects",
+    content:
+      "The WorkPacks team has more experience planning Green Hydrogen projects from the ground up than anyone on earth.",
+    image: "",
+  },
+  {
+    title: "EV Battery Plants",
+    content:
+      "From the earliest stages of engineering and site planning through commission, WorkPacks ™ provides a solution that allows contractors and owners to get electric vehicles (EVs) plants up and running and in production as quickly, cheaply and safely as possible to meet explosive global demand",
+    image: "",
+  },
+  {
+    title: "Data Centers",
+    content:
+      "The WorkPacks™ team has deep experience in constructing Data Centers facilities on-time and on-budget. Through our WorkPacks Facility ™ powered by Element product, we provide the most comprehensive solution for complex E&I projects",
+    image: "",
+  },
+  {
+    title: "LNG",
+    content:
+      "The WorkPacks™ team has experience helping literally the largest LNG projects in the world come online quickly and safely to build and develop Liquid Natural Gas (LNG) facilities.",
+    image: "",
+  },
+  {
+    title: "Oil & Gas",
+    content:
+      "Heavy construction is one of the greatest sources of carbon emissions on the planet. WorkPacks helps make those large construction projects faster, safer and more efficient, enabling savings of millions of tons of carbon per year.",
+    image: "",
+  },
+  {
+    title: "Chemical",
+    content:
+      "From building brand new facilities to brown field reclamation projects bringing existing plant up to modern standards, WorkPacks provides vision into the status of the project and provides time- and cost-saving benefits to the engineers, constructors and owner/operators.",
+    image: "",
+  },
+  {
+    title: "Power",
+    content:
+      "In order to keep up with demand and have plants online in time meet customer needs, construction needs to be a swift and efficient as possible. WorkPacks provides tools for the power plant owner/operator to have a clear vision into project status to make critical business decisions.",
+    image: "",
+  },
+  {
+    title: "Hospital",
+    content:
+      "The WorkPacks team is proud to have worked on some of the world’s largest hospital projects in recent years, getting them up and running faster and more efficiently and making critical care available at a critical time.",
+    image: "",
+  },
+  {
+    title: "Airports",
+    content:
+      "The high-flying WorkPacks team has steered some of the most successful terminal projects in recent years and helped get the jets in air on time. We provide all stakeholders an efficient project environment and increased visibility into real project status helping avoid humiliating cost and time overruns and missed deadlines.",
+    image: "",
+  },
+  {
+    title: "Infrastructure",
+    content:
+      "WorkPacks has led the drive for efficiency and on-time and on-budget project delivery on some of the world’s largest projects, from high-speed rail to high-speed data, from airports to cargo ports, from green hydropower to green hydrogen plants…",
+    image: "",
+  },
+];
+
+export const BUISNESS_INT: ACCORDION_ITEM[] = [
+  {
+    title: "How can I use WorkPacks for completions?",
+    content: (
+      <p>
+        Using WorkPacks for completions offers a transformative approach to
+        streamline your tasks. You can visualize system work packaging, directly
+        link ISOs to systems, and gain insights into work execution status by
+        the system. Whether you prefer a graphical or non-graphical
+        representation, WorkPacks allows you to define a system completion work
+        package. Moreover, it provides the flexibility to customize constraints,
+        encompassing vital parameters like quality checks or physical system
+        tests, ensuring a comprehensive completion process.
+      </p>
+    ),
+  },
+  {
+    title: "Can WorkPacks be used for turnaround/brownfield?",
+    content: (
+      <p>
+        WorkPacks was designed to operate and deliver value at all scales of
+        project size and type. WorkPacks has successfully been deployed in
+        small-cap to giga projects. WorkPacks’s first deployment was for
+        covering small-cap brownfield and maintenance turnaround projects at an
+        International Oil Company’s regional project office, handling
+        short-duration projects less than 100 million USD in Total Installed
+        Cost (TIC). WorkPacks tools for collaborative Path of Construction (POC)
+        can use 2D plot plans and other basic engineering documents such as
+        Process Flow Diagrams, frequently the only type of documents that are
+        available for brownfield/turnarounds, to drive constructability
+        planning. A 3D model and full digital engineering are not needed to use
+        WorkPacks for these projects. Data integration tools, WorkPacks Delta,
+        are used to tie existing information, data sets, and document
+        repositories into the 2D model to tie package information into the work
+        breakdown structure and packages with the platform. Specifically for
+        brownfield projects, WorkPacks has trade contractor management tools to
+        help with planning, packaging, and trackability of bulk trades typically
+        done without the benefit of fully digital detailed engineering. With
+        Work Packs, facilities management teams and construction managers can
+        open the WorkPacks environment for trade contractors, allowing the
+        contractor to build Installation Work Packages (IWPs) according to the
+        constructability plan and work breakdown structure defined through the
+        POC established in WorkPacks.
+      </p>
+    ),
+  },
+  {
+    title: "What does Owner oversight look like using WorkPacks?",
+    content: (
+      <p>
+        Owner Oversight involves the end client organization maintaining
+        visibility and control in steering the project execution while at a
+        level often removed from the detailed work generated by collaborative
+        suppliers within the contract quilt: Engineering, Procurement and
+        Contractors (EPCs), fabricators, equipment suppliers, material supply
+        chain elements, and field trade contractors. The data integration tools
+        allow these partners to maintain their separate data environments and
+        rely on the existing tools and pass reporting data sets, in their native
+        format, into the WorkPacks platform. With WorkPacks’ data integration
+        tools, existing data sets generated by each partner can be mapped
+        through digital threads and be pulled into the WorkPacks platform via
+        customizable automated workflows. For a single project or across
+        projects, an Owner Operator can use WorkPacks to aggregate project data
+        for the progression of engineering, construction, and completion,
+        establishing a reporting platform for management of the portfolio.
+      </p>
+    ),
+  },
+];
+
+export const RESOURCE_DROPDOWN = [
+  { label: "AWP Training", url: "/partnerships" },
+  { label: "AWP Consulting", url: "/partnerships" },
+  { label: "Talk to an Expert", url: "/#demo" },
+  { label: "Training and Certifications", url: "/training-certifications" },
+];
+
+export const NEWS_DROPDOWN = [
+  { label: "Announcements", url: "/announcements" },
+  { label: "Blog Posts", url: "/blogposts" },
+  { label: "Events", url: "/events" },
+];
+
+export const COMPANY_DROPDOWN = [
+  { label: "About", url: "/about" },
+  { label: "Leadership", url: "/leadership" },
+  { label: "FAQs", url: "/faq" },
+  { label: "Partnerships", url: "/partnerships" },
+  { label: "Career", url: "/career" },
 ];

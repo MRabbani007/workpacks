@@ -160,8 +160,8 @@ export default function Home() {
         </Wrapper>
       </section>
       <section className="py-10 lg:py-20">
-        <Wrapper className="bg-gradient-to-b from-sky-800 to-transparent via-sky-800/70 p-6">
-          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+        <Wrapper className="bg-gradient-to-b from-sky-800 to-transparent via-sky-800/70">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 p-6">
             <div className="flex-1 flex flex-col gap-4">
               <Image
                 src="/MicrosoftTeams-image-2.png"
@@ -309,7 +309,10 @@ export default function Home() {
           <Accordion items={WORKPACKS_FAQ} />
         </Wrapper>
       </section>
-      <section className="bg-sky-800 min-h-screen p-0 lg:p-10 flex items-center">
+      <section
+        id="demo"
+        className="bg-sky-800 min-h-screen p-0 lg:p-10 flex items-center"
+      >
         <Wrapper className="flex flex-col items-center justify-center flex-1">
           <p className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4">
             Get a Free Demo from our experts
