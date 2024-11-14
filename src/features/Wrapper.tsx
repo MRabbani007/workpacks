@@ -8,7 +8,7 @@ export default function Wrapper({
   className?: string;
 }) {
   return (
-    <div className={"lg:max-w-[80vw] mx-auto p-4 lg:p-0 " + className ?? ""}>
+    <div className={"lg:max-w-[80vw] mx-auto p-4 lg:p-0 " + className}>
       {children}
     </div>
   );
