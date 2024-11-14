@@ -244,7 +244,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-4 gap-6 mt-10">
             {items.map((item, idx) => (
-              <div className="p-4 border-[1px] border-zinc-200">
+              <div key={idx} className="p-4 border-[1px] border-zinc-200">
                 {item?.icon ?? null}
                 <p className="text-2xl font-semibold text-zinc-900 my-2">
                   {item.title}
