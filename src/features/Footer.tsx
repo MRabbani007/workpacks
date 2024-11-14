@@ -1,13 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import Wrapper from "./Wrapper";
 
 export default function Footer() {
   return (
-    <div className=" bg-gradient-to-br from-sky-800 to-sky-950">
-      <div className="py-20 flex gap-6 max-w-[85vw] mx-auto text-sm">
+    <div className="bg-gradient-to-br from-sky-800 to-sky-950">
+      <Wrapper className="py-10 lg:py-20 flex flex-col sm:flex-row flex-wrap gap-6 md:max-w-[85vw] mx-auto text-sm ">
         <div className="mr-4 flex-1">
           <div className="h-[1px] bg-blue-400/40" />
-          <div className="flex items-center justify-center gap-6 my-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 my-6">
             <Image src="/AiCPA-logo.png" alt="AiCPA" width={100} height={100} />
             <Image src="/SOC-2.webp" alt="SOC-2" width={90} height={90} />
             <Image
@@ -18,9 +19,9 @@ export default function Footer() {
             />
           </div>
           <div className="h-[1px] bg-blue-400/40" />
-          <div className="flex items-center gap-8 mt-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-y-4 gap-x-8 mt-6">
             <Image src="/logo-white.png" alt="logo" width={100} height={40} />
-            <p className="border-l-2 border-white pl-6">
+            <p className="md:border-l-2 border-white md:pl-6">
               The new scalable solution for applying AWP to capital projects.
             </p>
           </div>
@@ -59,8 +60,8 @@ export default function Footer() {
           <p>Work From Home (WFH) Policy</p>
           <p>Cookie Policy</p>
         </div>
-      </div>
-      <div className="border-t-[1px] mt-10 p-6 text-center">
+      </Wrapper>
+      <div className="border-t-[1px] mt-4 lg:mt-10 p-6 text-center">
         Copyright © 2024 Work Packs Inc. - All rights reserved.
       </div>
     </div>

@@ -48,12 +48,12 @@ const AccordionItem = ({
       <div
         className={
           (expand === index
-            ? "h-32 p-4 border-[1px] border-zinc-200 rounded-md"
+            ? "h-32 p-4 border-[1px] border-zinc-200 rounded-md overflow-y-auto"
             : "-translate-y-4 h-0 invisible opacity-0 ") +
           " transition-all duration-300 text-zinc-700"
         }
       >
-        {content}
+        <div>{content}</div>
       </div>
     </div>
   );

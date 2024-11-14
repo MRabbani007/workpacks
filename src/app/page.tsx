@@ -1,6 +1,8 @@
 import Accordion from "@/features/Accordion";
+import Wrapper from "@/features/Wrapper";
 import { INDUSTRY_GENERAL_KNOWLEDGE, WORKPACKS_FAQ } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 import { FaChartBar, FaRegFileAlt } from "react-icons/fa";
 import {
   FaArrowRightArrowLeft,
@@ -65,13 +67,13 @@ const items = [
 export default function Home() {
   return (
     <main className="">
-      <section className="min-h-[90vh] bg-gradient-to-b from-sky-900 to-sky-950 flex items-center justify-center">
-        <div className="max-w-[80vw] mx-auto flex items-center gap-6 h-full">
-          <div className="flex-1">
-            <p className="text-6xl font-extrabold mb-6">
+      <section className="min-h-[90vh] bg-gradient-to-b from-sky-900 to-sky-950 flex items-center justify-center pt-32">
+        <Wrapper className="flex items-center justify-center gap-6 h-full flex-col lg:flex-row">
+          <div className="flex-1 space-y-6">
+            <p className="sm:text-5xl md:text-6xl text-4xl font-extrabold">
               Where innovation meets experience.
             </p>
-            <p className="text-xl">
+            <p className="text-sm sm:text-base md:text-xl">
               WorkPacks is the Digital Construction Planning solution and
               Advanced Work Packaging software of choice for the world&apos;s
               largest Giga projects. Supporting the AWP process, it is trusted
@@ -79,9 +81,11 @@ export default function Home() {
               facilities and utilized by the world&apos;s leading EPC
               contractors.
             </p>
-            <button className="btn-blue mt-6">Request a Trial</button>
+            <Link href="/free-trial" className="btn-blue inline-block">
+              Request a Trial
+            </Link>
           </div>
-          <div className="flex-1 relative min-h-[400px] shrink-0">
+          <div className="relative w-[300px] h-[200px] sm:w-[400px] sm:h-[300px] md:w-[500px] md:h-[350px]">
             <Image
               src="/Home-WorkPacks.webp"
               alt="hero-image"
@@ -89,11 +93,11 @@ export default function Home() {
               className="inset-0"
             />
           </div>
-        </div>
+        </Wrapper>
       </section>
       <section className="flex items-center justify-center py-14 gap-6">
-        <div className="max-w-[80vw] mx-auto flex items-stretch gap-8">
-          <div className="p-8 w-[400px] shadow-md shadow-zinc-600 flex flex-col items-center justify-center">
+        <Wrapper className="flex items-stretch gap-8 flex-col lg:flex-row">
+          <div className="p-8 w-full lg:w-[400px] shadow-md shadow-zinc-600 flex flex-col items-center justify-center">
             <Image
               src="/logo.png"
               width={150}
@@ -106,33 +110,34 @@ export default function Home() {
             </p>
           </div>
           <div className="p-8 flex-1 shadow-md shadow-zinc-600">
-            <p className="text-4xl font-semibold text-sky-900">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-sky-900">
               The modern Advanced Work Packaging platform for delivering safe,
               productive projects
             </p>
-            <div className="space-x-6 my-6">
+            <div className="my-6 flex flex-wrap gap-4 justify-center">
               <button className="btn-blue">Book Your Demo</button>
               <button className="btn-blue">
                 Access our Award wining case study
               </button>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </section>
-      <section className="p-8">
-        <div className="max-w-[80vw] mx-auto flex items-center gap-6">
-          <div className="flex-1">
+      <section className="py-8">
+        <Wrapper className="flex items-center gap-6 flex-col lg:flex-row">
+          <div className="">
             <iframe
-              width="560"
-              height="315"
+              // width="560"
+              // height="315"
               src="https://www.youtube.com/embed/to8cASHoiV8?si=fi649C8McJCwYrZu"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               // referrerpolicy="strict-origin-when-cross-origin"
-              // allowfullscreen
+              // allowfullscreen={true}
+              className="w-[350px] sm:w-[400px] md:w-[500px] lg:[600px] aspect-video"
             ></iframe>
           </div>
-          <div className="flex-1">
+          <div className="">
             <p className="text-sky-950 font-semibold text-2xl mb-4">
               Join us for a quick look into the future of work packaging!
             </p>
@@ -150,20 +155,20 @@ export default function Home() {
               establishing a successful AWP program is not just achievable but
               also straightforward.
             </p>
-            <button className="btn-blue">Watch More</button>
+            <button className="btn-blue mx-auto lg:mx-none">Watch More</button>
           </div>
-        </div>
+        </Wrapper>
       </section>
-      <section className="py-20">
-        <div className="max-w-[80vw] mx-auto bg-gradient-to-b from-sky-800 to-transparent via-sky-800/70 p-6">
-          <div className="flex gap-6">
+      <section className="py-10 lg:py-20">
+        <Wrapper className="bg-gradient-to-b from-sky-800 to-transparent via-sky-800/70 p-6">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             <div className="flex-1 flex flex-col gap-4">
               <Image
                 src="/MicrosoftTeams-image-2.png"
                 alt="Workpacks delta"
                 height={50}
                 width={170}
-                className="w-[400px] h-auto"
+                className="max-w-[250px] md:max-w-none md:w-[400px] w-full h-auto"
               />
               <p className="text-pretty">
                 WorkPacks Delta connects information and project stakeholders
@@ -171,7 +176,7 @@ export default function Home() {
                 construction automation tools based upon AWP Best Practices
               </p>
             </div>
-            <div className="w-[400px] h-[300px] relative">
+            <div className="w-[300px] md:w-[400px] h-[200px] md:h-[300px] relative mx-auto">
               <Image
                 src="/WorkPacks-Delta-2048x1633.webp"
                 alt="Microsoft teams"
@@ -182,34 +187,36 @@ export default function Home() {
           <div>
             <p className="text-sky-950 text-center">
               WorkPacks Delta comes with a configurable{" "}
-              <span className="p-2 bg-sky-900 text-white font-medium">
+              <span className="p-2 bg-sky-900 text-white font-medium text-nowrap">
                 Neo Flow Solution
               </span>{" "}
               for your capital project(s)
             </p>
           </div>
-        </div>
+        </Wrapper>
       </section>
-      <section className="min-h-screen bg-sky-800 flex flex-col">
-        <div className="max-w-[80vw] mx-auto flex-1 flex flex-col items-center justify-center">
-          <p className="text-6xl font-semibold mb-8 text-center text-balance">
-            We commit to our responsibilities to drive successful partnerships
-          </p>
-          <div className="flex gap-6 w-full">
-            <div className="border-2 border-white rounded-sm py-6 px-10 flex-1 text-center">
-              <p className="text-4xl font-bold">$24 Billion+</p>
-              <p className="text-xl m-4 font-medium">
-                Deployed on projects with a cumulative value of
-              </p>
-            </div>
-            <div className="border-2 border-white rounded-sm py-6 px-10 flex-1 text-center">
-              <p className="text-4xl font-bold">10+ Industries</p>
-              <p className="text-xl m-4 font-medium">in 10 countries</p>
+      <section className="min-h-screen bg-sky-800 flex flex-col justify-center">
+        <Wrapper className="flex-1 flex flex-col items-center justify-center">
+          <div>
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold mb-8 text-center text-balance">
+              We commit to our responsibilities to drive successful partnerships
+            </p>
+            <div className="flex flex-col md:flex-row gap-6 w-full">
+              <div className="border-2 border-white rounded-sm py-6 px-10 flex-1 text-center">
+                <p className="text-4xl font-bold">$24 Billion+</p>
+                <p className="text-xl m-4 font-medium">
+                  Deployed on projects with a cumulative value of
+                </p>
+              </div>
+              <div className="border-2 border-white rounded-sm py-6 px-10 flex-1 text-center">
+                <p className="text-4xl font-bold">10+ Industries</p>
+                <p className="text-xl m-4 font-medium">in 10 countries</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="bg-gradient-to-b from-zinc-300 to-white h-[20vh] relative">
-          <div className="absolute top-0 left-0 right-0 -translate-y-1/2 p-10 bg-white shadow-md shadow-zinc-600 max-w-[80vw] mx-auto flex items-center">
+        </Wrapper>
+        <div className="bg-gradient-to-b from-zinc-300 to-white h-[20vh] z-0 mt-8 relative w-full">
+          <div className="absolute top-0 left-0 right-0 -translate-y-1/2 p-4 lg:p-10 bg-white shadow-md shadow-zinc-600 max-w-[80vw] mx-auto flex gap-4 flex-row items-center">
             <div className="text-center space-y-2 flex-1">
               <p className="text-sky-700 font-extrabold text-4xl">40+</p>
               <p className="text-zinc-600 font-medium">Certified Experts</p>
@@ -224,25 +231,25 @@ export default function Home() {
         </div>
       </section>
       <section className="p-10 bg-gradient-to-l from-zinc-500/70 to-zinc-200 via-zinc-300/50 my-10">
-        <div className="max-w-[80vw] mx-auto">
-          <p className="text-4xl font-semibold text-sky-950 max-w-[500px] mb-6">
+        <Wrapper>
+          <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-sky-950 max-w-[500px] mb-6">
             The Award Winning Results on the Largest LNG Projects in the World
           </p>
           <button className="btn-blue">
             Access Our Award Wining Case Study
           </button>
-        </div>
+        </Wrapper>
       </section>
-      <section className="p-20">
-        <div className="max-w-[80vw] mx-auto">
+      <section className="py-10 lg:p-20">
+        <Wrapper>
           <p className="text-blue-900 mb-4 text-center">What we do</p>
-          <p className="text-sky-950 text-4xl font-bold text-center">
+          <p className="text-sky-950 text-2xl sm:text-3xl md:text-4xl font-bold text-center">
             Listening to you, and answering{" "}
           </p>
-          <p className="text-sky-950 text-4xl font-bold text-center">
+          <p className="text-sky-950 text-2xl sm:text-3xl md:text-4xl font-bold text-center">
             with software
           </p>
-          <div className="grid grid-cols-4 gap-6 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
             {items.map((item, idx) => (
               <div key={idx} className="p-4 border-[1px] border-zinc-200">
                 {item?.icon ?? null}
@@ -253,17 +260,17 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </Wrapper>
       </section>
       <section>
-        <div className="max-w-[80vw] mx-auto">
-          <p className="text-sky-950 font-semibold text-4xl text-center">
+        <Wrapper>
+          <p className="text-sky-950 font-semibold text-2xl sm:text-3xl md:text-4xl text-center">
             WorkPacks is a Software Solution{" "}
             <span className="text-sky-400">Certified</span> by AICPA's SOC2 Type
             II
           </p>
-          <div className="flex items-center justify-center gap-10">
-            <div className="relative h-[300px] w-[300px]">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-10">
+            <div className="relative h-[200px] md:h-[300px] w-[200px] md:w-[300px]">
               <Image
                 src="/AiCPA-logo.png"
                 alt="AICPA Logo"
@@ -271,7 +278,7 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="relative h-[250px] w-[250px]">
+            <div className="relative h-[170px] md:h-[250px] w-[170px] md:w-[250px]">
               <Image
                 src="/SOC-2.webp"
                 alt="AICPA SOC-2"
@@ -280,14 +287,14 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </Wrapper>
       </section>
       <section className="pb-20">
-        <div className="max-w-[80vw] mx-auto flex flex-col items-center justify-center">
+        <Wrapper className="flex flex-col items-center justify-center">
           <p className="text-sky-900 font-semibold text-2xl mt-6">
             INDUSTRY / GENERAL KNOWLEDGE
           </p>
-          <div className="h-2 w-[400px] relative bg-zinc-800 my-4">
+          <div className="h-2 w-[300px] md:w-[400px] relative bg-zinc-800 my-4">
             <div className="w-[50%] h-full bg-blue-500"></div>
           </div>
           <button className="btn-blue mb-6">Frequently Asked Questions</button>
@@ -295,24 +302,24 @@ export default function Home() {
           <p className="text-sky-900 font-semibold text-2xl mt-6">
             MEET WORKPACKS
           </p>
-          <div className="h-2 w-[400px] relative bg-zinc-800 my-4">
+          <div className="h-2 w-[300px] md:w-[400px] relative bg-zinc-800 my-4">
             <div className="w-[50%] h-full bg-blue-500"></div>
           </div>
           <button className="btn-blue mb-6">Frequently Asked Questions</button>
           <Accordion items={WORKPACKS_FAQ} />
-        </div>
+        </Wrapper>
       </section>
-      <section className="bg-sky-800 min-h-screen p-10 flex items-center">
-        <div className="max-w-[80vw] mx-auto flex flex-col items-center justify-center flex-1">
-          <p className="text-5xl font-semibold mb-4">
+      <section className="bg-sky-800 min-h-screen p-0 lg:p-10 flex items-center">
+        <Wrapper className="flex flex-col items-center justify-center flex-1">
+          <p className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4">
             Get a Free Demo from our experts
           </p>
-          <p>
+          <p className="text-sm md:text-base">
             Get your access to the most scalable, affordable and complete AWP
             solution.
           </p>
-          <div className="bg-white p-10 w-[70%] mt-10">
-            <div className="grid grid-cols-2 gap-8">
+          <div className="bg-white p-4 lg:p-10 lg:w-[70%] mt-10 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div className="flex flex-col gap-2">
                 <label htmlFor="" className="text-zinc-700 font-bold">
                   Your Name
@@ -354,15 +361,15 @@ export default function Home() {
               <button className="btn-blue mx-auto mt-8">Get a Free Demo</button>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </section>
-      <section className="min-h-screen p-10 flex items-center">
-        <div className="max-w-[80vw] mx-auto text-center">
+      <section className="min-h-screen p-4 md:p-10 flex items-center">
+        <Wrapper className="text-center">
           <p className="text-4xl text-sky-900 font-semibold mb-8">
             Success Stories
           </p>
-          <div className="flex items-stretch gap-6 text-zinc-700">
-            <div className="p-6 bg-zinc-200 rounded-sm flex-1">
+          <div className="flex flex-wrap items-stretch gap-6 text-zinc-700">
+            <div className="p-6 bg-zinc-200 rounded-sm flex-1 min-w-[300px]">
               <p>
                 “Real success in AWP requires planning for construction work
                 packaging from the very beginning of the Engineering and
@@ -375,7 +382,7 @@ export default function Home() {
               </p>
               <p className="text-sky-800 mt-4 font-semibold">EPC IT Director</p>
             </div>
-            <div className="p-6 bg-zinc-200 rounded-sm flex-1">
+            <div className="p-6 bg-zinc-200 rounded-sm flex-1 min-w-[300px]">
               <p>
                 “In 2018 our organization committed to deploying AWP on new
                 construction and turn-around projects. We selected WorkPacks for
@@ -389,7 +396,7 @@ export default function Home() {
                 Construction Technical Services Manager, International Oil Major
               </p>
             </div>
-            <div className="p-6 bg-zinc-200 rounded-sm flex-1">
+            <div className="p-6 bg-zinc-200 rounded-sm flex-1 min-w-[300px]">
               <p>
                 “Everybody says they’re scalable. WorkPacks really does it. We
                 rolled out the WorkPacks software on three giga-projects
@@ -401,7 +408,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </section>
     </main>
   );
