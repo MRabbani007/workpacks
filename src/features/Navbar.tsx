@@ -6,11 +6,12 @@ import Wrapper from "./Wrapper";
 import DropDown from "./DropDown";
 import MobileMenu from "./MobileMenu";
 import { COMPANY_DROPDOWN, NEWS_DROPDOWN, RESOURCE_DROPDOWN } from "@/lib/data";
+import DropDownWP from "./DropDownWP";
 
 export default function Navbar() {
   return (
     <nav className="lg:py-6 lg:px-0 absolute top-0 left-0 right-0 z-50">
-      <Wrapper className="flex items-center justify-center gap-4">
+      <Wrapper className="flex items-center justify-center gap-4 relative">
         <Link href="/" className="">
           <Image
             src="/logo-white.png"
@@ -24,13 +25,7 @@ export default function Navbar() {
           <Link href="/" className="hover:text-orange-300 duration-200">
             Home
           </Link>
-          <Link
-            href="/workpacks-solution"
-            className="flex items-center gap-2 hover:text-orange-300 duration-200"
-          >
-            WorkPacks Solution
-            <FaChevronDown size={10} className="text-blue-400" />
-          </Link>
+          <DropDownWP />
           <Link
             href="/customers"
             className="flex items-center gap-2 hover:text-orange-300 duration-200"

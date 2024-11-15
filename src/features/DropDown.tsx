@@ -26,7 +26,7 @@ export default function DropDown({
       <div
         className={
           (show ? "" : "-translate-y-4 opacity-0 ") +
-          " absolute top-full left-0 flex flex-col bg-zinc-50"
+          " absolute top-full left-0 flex flex-col bg-zinc-50 duration-200"
         }
       >
         {items.map((item, idx) => (

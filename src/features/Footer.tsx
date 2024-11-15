@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Wrapper from "./Wrapper";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
       <Wrapper className="py-10 lg:py-20 flex flex-col sm:flex-row flex-wrap gap-6 md:max-w-[85vw] mx-auto text-sm ">
         <div className="mr-4 flex-1">
           <div className="h-[1px] bg-blue-400/40" />
-          <div className="flex flex-wrap items-center justify-center gap-6 my-6">
+          <div className="flex lg:flex-nowrap flex-wrap items-center justify-center gap-2 my-6 mx-auto">
             <Image src="/AiCPA-logo.png" alt="AiCPA" width={100} height={100} />
             <Image src="/SOC-2.webp" alt="SOC-2" width={90} height={90} />
             <Image
@@ -19,21 +20,21 @@ export default function Footer() {
             />
           </div>
           <div className="h-[1px] bg-blue-400/40" />
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-y-4 gap-x-8 mt-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-y-4 gap-x-4 mt-6">
             <Image src="/logo-white.png" alt="logo" width={100} height={40} />
-            <p className="md:border-l-2 border-white md:pl-6">
+            <p className="md:border-l-2 border-white md:pl-4">
               The new scalable solution for applying AWP to capital projects.
             </p>
           </div>
         </div>
-        <div className="mr-6">
+        <div className="mr-6 flex flex-col gap-2">
           <p className="font-semibold text-2xl mb-4 text-pretty">
             WorkPacks Solution
           </p>
-          <p>WorkPacks Plan™</p>
-          <p>WorkPacks Delta™</p>
-          <p>WorkPacks Build™</p>
-          <p>WorkPacks Analyze™</p>
+          <Link href="/solutions/plan">WorkPacks Plan™</Link>
+          <Link href="/solutions/delta">WorkPacks Delta™</Link>
+          <Link href="/solutions/build">WorkPacks Build™</Link>
+          <Link href="/solutions/analyze">WorkPacks Analyze™</Link>
         </div>
         <div>
           <p className="font-semibold text-2xl mb-4">Support</p>

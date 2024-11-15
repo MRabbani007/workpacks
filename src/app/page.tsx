@@ -1,4 +1,8 @@
 import Accordion from "@/features/Accordion";
+import CardStatistics from "@/features/CardStatistics";
+import CardStatisticsContainer from "@/features/CardStatisticsContainer";
+import SectionFreeDemo from "@/features/SectionFreeDemo";
+import SectionSuccessStories from "@/features/SectionSuccessStories";
 import Wrapper from "@/features/Wrapper";
 import { INDUSTRY_GENERAL_KNOWLEDGE, WORKPACKS_FAQ } from "@/lib/data";
 import Image from "next/image";
@@ -215,20 +219,9 @@ export default function Home() {
             </div>
           </div>
         </Wrapper>
-        <div className="bg-gradient-to-b from-zinc-300 to-white h-[20vh] z-0 mt-8 relative w-full">
-          <div className="absolute top-0 left-0 right-0 -translate-y-1/2 p-4 lg:p-10 bg-white shadow-md shadow-zinc-600 max-w-[80vw] mx-auto flex gap-4 flex-row items-center">
-            <div className="text-center space-y-2 flex-1">
-              <p className="text-sky-700 font-extrabold text-4xl">40+</p>
-              <p className="text-zinc-600 font-medium">Certified Experts</p>
-            </div>
-            <div className="text-center space-y-2 flex-1">
-              <p className="text-sky-700 font-extrabold text-4xl">150+</p>
-              <p className="text-zinc-600 font-medium">
-                Combined Years of Experience
-              </p>
-            </div>
-          </div>
-        </div>
+        <CardStatisticsContainer>
+          <CardStatistics />
+        </CardStatisticsContainer>
       </section>
       <section className="p-10 bg-gradient-to-l from-zinc-500/70 to-zinc-200 via-zinc-300/50 my-10">
         <Wrapper>
@@ -309,110 +302,8 @@ export default function Home() {
           <Accordion items={WORKPACKS_FAQ} />
         </Wrapper>
       </section>
-      <section
-        id="demo"
-        className="bg-sky-800 min-h-screen p-0 lg:p-10 flex items-center"
-      >
-        <Wrapper className="flex flex-col items-center justify-center flex-1">
-          <p className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-4">
-            Get a Free Demo from our experts
-          </p>
-          <p className="text-sm md:text-base">
-            Get your access to the most scalable, affordable and complete AWP
-            solution.
-          </p>
-          <div className="bg-white p-4 lg:p-10 lg:w-[70%] mt-10 w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-zinc-700 font-bold">
-                  Your Name
-                </label>
-                <input type="text" className="bg-zinc-100 text-black p-2" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-zinc-700 font-bold">
-                  Company Name
-                </label>
-                <input type="text" className="bg-zinc-100 text-black p-2" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-zinc-700 font-bold">
-                  Phone Number
-                </label>
-                <input type="text" className="bg-zinc-100 text-black p-2" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-zinc-700 font-bold">
-                  Email
-                </label>
-                <input type="text" className="bg-zinc-100 text-black p-2" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-zinc-700 font-bold">
-                  Job Title
-                </label>
-                <input type="text" className="bg-zinc-100 text-black p-2" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-zinc-700 font-bold">
-                  Company Type
-                </label>
-                <input type="text" className="bg-zinc-100 text-black p-2" />
-              </div>
-            </div>
-            <div className="flex">
-              <button className="btn-blue mx-auto mt-8">Get a Free Demo</button>
-            </div>
-          </div>
-        </Wrapper>
-      </section>
-      <section className="min-h-screen p-4 md:p-10 flex items-center">
-        <Wrapper className="text-center">
-          <p className="text-4xl text-sky-900 font-semibold mb-8">
-            Success Stories
-          </p>
-          <div className="flex flex-wrap items-stretch gap-6 text-zinc-700">
-            <div className="p-6 bg-zinc-200 rounded-sm flex-1 min-w-[300px]">
-              <p>
-                “Real success in AWP requires planning for construction work
-                packaging from the very beginning of the Engineering and
-                Procurement part of the project. Historically, we’ve faced
-                challenges due to a lack of availability of useful EP tools
-                connecting engineering and procurement systems and data to
-                implement AWP in the construction process. With the WorkPacks EP
-                See™ Module, we finally have a seamless way of linking those
-                processes. This is going to save us so much time and money.”
-              </p>
-              <p className="text-sky-800 mt-4 font-semibold">EPC IT Director</p>
-            </div>
-            <div className="p-6 bg-zinc-200 rounded-sm flex-1 min-w-[300px]">
-              <p>
-                “In 2018 our organization committed to deploying AWP on new
-                construction and turn-around projects. We selected WorkPacks for
-                use on a trial basis on a single small turn-around site the
-                following year. The results in terms of avoiding project delay
-                and increased granular visibility into project status really
-                exceeded expectations. We’re now rolling out the WorkPacks
-                Solution Globally at all our Regional Project Offices.”
-              </p>
-              <p className="text-sky-800 mt-4 font-semibold">
-                Construction Technical Services Manager, International Oil Major
-              </p>
-            </div>
-            <div className="p-6 bg-zinc-200 rounded-sm flex-1 min-w-[300px]">
-              <p>
-                “Everybody says they’re scalable. WorkPacks really does it. We
-                rolled out the WorkPacks software on three giga-projects
-                globally simultaneously. I honestly wasn’t expecting things to
-                go so smoothly. Kudos to the WorkPacks team.”
-              </p>
-              <p className="text-sky-800 mt-4 font-semibold">
-                EPC Digital Transformation Director, CEO Lokamart
-              </p>
-            </div>
-          </div>
-        </Wrapper>
-      </section>
+      <SectionFreeDemo />
+      <SectionSuccessStories />
     </main>
   );
 }

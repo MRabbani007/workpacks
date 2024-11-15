@@ -139,24 +139,28 @@ export const SOLUTION_ITEMS = [
     detail:
       "Makes AWP easy to deploy through specialized automation techniques that streamline Path of Construction development from plot plan mark-ups to auto-generated CWPs, EWPs, PWPs, schedules and IWP Release Plans.",
     image: "/POC.webp",
+    url: "/solutions/plan",
   },
   {
     title: "DELTA",
     detail:
       "Orchestrate the EPC Systems Integration for AWP to provide a Virtual Construction Model environment that is organized around Advanced Work Packaging workflows.",
     image: "/Delta.webp",
+    url: "/solutions/delta",
   },
   {
     title: "BUILD",
     detail:
       "Next-generation IWP templates and automation techniques for AWP best practice. Create, assemble, track, release, execute, progress, close-out, and report IWPs accurately across all project disciplines.",
     image: "/Builder.jpg",
+    url: "/solutions/build",
   },
   {
     title: "ANALYZE",
     detail:
       "Serves as the nerve centerfor AWP insights. Offers dynamic AWP dashboards, performance KPIs, and visual reports through S-curves, Skyline reports, and status visualizations for effective oversight, ensuring productivity and progress are always in focus.",
     image: "/analyze.webp",
+    url: "/solutions/analyze",
   },
 ];
 

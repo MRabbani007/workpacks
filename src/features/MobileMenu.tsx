@@ -10,14 +10,14 @@ export default function MobileMenu() {
   //   const [expand, setExpand] = useState(-1);
 
   return (
-    <div className="ml-auto">
-      <button className="btn-blue block" onClick={() => setShow(true)}>
+    <div className="ml-auto lg:hidden">
+      <button className="btn-blue" onClick={() => setShow(true)}>
         <CgMenuRight size={25} />
       </button>
       <div
         className={
           (show ? "" : "scale-0 opacity-0") +
-          " fixed inset-0 bg-zinc-500/50 duration-100 delay-100 flex items-stretch"
+          " fixed inset-0 bg-zinc-900/50 duration-100 delay-100 flex items-stretch"
         }
       ></div>
       <div
