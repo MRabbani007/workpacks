@@ -7,7 +7,6 @@ import Wrapper from "@/features/Wrapper";
 import { PLANT_FEATURES_P, PLANT_FEATURES_T } from "@/lib/data_features";
 import Image from "next/image";
 import React from "react";
-import { BiCheck } from "react-icons/bi";
 
 export default function WorkpacksPlanPage() {
   return (

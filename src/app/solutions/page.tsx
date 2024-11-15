@@ -1,5 +1,4 @@
 import SolutionsHero from "@/features/SolutionsHero";
-import Wrapper from "@/features/Wrapper";
 import { SOLUTION_ITEMS } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";

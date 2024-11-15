@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaChevronDown } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import DropDown from "./DropDown";
 import MobileMenu from "./MobileMenu";
