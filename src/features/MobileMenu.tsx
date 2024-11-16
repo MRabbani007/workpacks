@@ -1,13 +1,22 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
-import { FaTimes } from "react-icons/fa";
+import { FaChevronRight, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { DROPDOWN_ITEM } from "../../types";
+import { COMPANY_DROPDOWN, NEWS_DROPDOWN, RESOURCE_DROPDOWN } from "@/lib/data";
+
+const SOLUTION_MENU = [
+  { label: "WorkPacks Plan", url: "/solutions/plan" },
+  { label: "WorkPacks Delta", url: "/solutions/delta" },
+  { label: "WorkPacks Build", url: "/solutions/build" },
+  { label: "WorkPacks Analyze", url: "/solutions/analyze" },
+];
 
 export default function MobileMenu() {
   const [show, setShow] = useState(false);
-  //   const [expand, setExpand] = useState(-1);
+  const [expand, setExpand] = useState(-1);
 
   return (
     <div className="ml-auto lg:hidden">
@@ -35,19 +44,105 @@ export default function MobileMenu() {
             <FaTimes size={30} />
           </button>
         </div>
-        <div className="flex flex-col gap-2 text-zinc-700">
-          <Link href="/">Home</Link>
-          <Link href="/">Workpacks Solution</Link>
-          <Link href="/">Customers</Link>
-          <Link href="/">Resources</Link>
-          <Link href="/">News</Link>
-          <Link href="/">Company</Link>
+        <div className="flex flex-col text-zinc-700">
+          <Link
+            href="/"
+            onClick={() => setShow(false)}
+            className="p-2 hover:bg-zinc-200 hover:text-orange-400 duration-200"
+          >
+            Home
+          </Link>
+          <Submenu
+            label="Workpacks Solution"
+            index={1}
+            expand={expand}
+            setExpand={setExpand}
+            setShow={setShow}
+            children={SOLUTION_MENU}
+          />
+          <Link
+            href="/customers"
+            onClick={() => setShow(false)}
+            className="p-2 hover:bg-zinc-200 hover:text-orange-400 duration-200"
+          >
+            Customers
+          </Link>
+          <Submenu
+            label="Resources"
+            children={RESOURCE_DROPDOWN}
+            index={2}
+            expand={expand}
+            setShow={setShow}
+            setExpand={setExpand}
+          />
+          <Submenu
+            label="News"
+            children={NEWS_DROPDOWN}
+            index={3}
+            expand={expand}
+            setShow={setShow}
+            setExpand={setExpand}
+          />
+          <Submenu
+            label="Company"
+            children={COMPANY_DROPDOWN}
+            index={4}
+            expand={expand}
+            setShow={setShow}
+            setExpand={setExpand}
+          />
         </div>
       </div>
     </div>
   );
 }
 
-// const Submenu = ({ label, items }: { label: string; items: DROPDOWN_ITEM }) => {
-//   return <div></div>;
-// };
+const Submenu = ({
+  label,
+  children,
+  expand,
+  index,
+  setExpand,
+  setShow,
+}: {
+  label: string;
+  children?: DROPDOWN_ITEM[];
+  expand: number;
+  index: number;
+  setExpand: Dispatch<SetStateAction<number>>;
+  setShow: Dispatch<SetStateAction<boolean>>;
+}) => {
+  return (
+    <div className="">
+      <button
+        onClick={() => setExpand((curr) => (curr === index ? -1 : index))}
+        className="p-2 flex items-center justify-between gap-4 w-full hover:bg-zinc-200 hover:text-orange-400 duration-200"
+      >
+        <span>{label}</span>
+        <FaChevronRight
+          className={(expand === index ? "rotate-90" : "") + " duration-200"}
+        />
+      </button>
+      {children && (
+        <div
+          className={
+            (expand === index
+              ? `h-[${children.length * 40}px]`
+              : "h-0 invisible opacity-0") + " flex flex-col duration-200"
+          }
+        >
+          {children.map((item, idx) => (
+            <Link
+              href={item.url}
+              key={idx}
+              onClick={() => setShow(false)}
+              className="py-2 px-4 hover:bg-zinc-200 hover:text-orange-400 duration-200"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};

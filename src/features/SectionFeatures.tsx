@@ -13,7 +13,7 @@ export default function SectionFeatures({
 }) {
   return (
     <section className="flex items-center justify-center py-14 gap-6">
-      <Wrapper className="flex gap-6">
+      <Wrapper className="flex gap-6 flex-col md:flex-row ">
         <div className="text-zinc-700 space-y-4 flex-1">
           <p className="text-sky-900 font-semibold text-4xl mt-6">Features</p>
           {text.map((item, idx) => (
@@ -31,7 +31,7 @@ export default function SectionFeatures({
             ))}
           </div>
         </div>
-        <div className="flex-1 text-zinc-800 font-semibold">{children}</div>
+        <div className="md:flex-1 text-zinc-800 font-semibold">{children}</div>
       </Wrapper>
     </section>
   );
