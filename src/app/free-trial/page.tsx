@@ -1,12 +1,14 @@
+import Wrapper from "@/features/Wrapper";
 import Image from "next/image";
 import React from "react";
 
 export default function FreeTrialPage() {
   return (
     <main>
-      <section className=" p-40 min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-900 to-sky-950">
-        <div className="max-w-[80vw] mx-auto text-center">
-          <p className="text-6xl font-bold mb-4">
+      <section className="py-20 min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-900 to-sky-950 relative overflow-x-clip">
+        <div className="wave absolute left-0 right-0 bottom-0 min-w-[1000px] bg-zinc-200 z-10 h-10" />
+        <Wrapper className="text-center">
+          <p className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Try WorkPacks with a 30-day Trial
           </p>
           <p className="font-medium mb-4">
@@ -20,10 +22,10 @@ export default function FreeTrialPage() {
               className="object-contain object-center"
             />
           </div>
-        </div>
+        </Wrapper>
       </section>
-      <section className="p-20 bg-zinc-200">
-        <div className="max-w-[80vw] mx-auto flex items-start gap-10">
+      <section className="lg:p-20 bg-zinc-200">
+        <Wrapper className="flex flex-col lg:flex-row items-stretch lg:items-start gap-10">
           <div className="flex-1 py-10 relative z-0">
             <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[350px] h-[350px] bg-gradient-to-br from-indigo-300/40 to-transparent rounded-full -z-10"></div>
             <div className="text-5xl font-semibold text-sky-900">
@@ -34,7 +36,7 @@ export default function FreeTrialPage() {
               Get your access to the most scalable, affordable and complete AWP
               solution.
             </p>
-            <div className="flex items-stretch gap-4 text-center">
+            <div className="flex flex-col md:flex-row items-stretch gap-4 text-center">
               <div className="p-4 space-y-2 border-[1px] border-zinc-100 bg-white">
                 <p className="text-sky-900 font-semibold text-6xl">150+</p>
                 <p className="text-sky-900 font-medium text-xl">
@@ -58,7 +60,7 @@ export default function FreeTrialPage() {
             </div>
           </div>
           <div className="bg-zinc-300 flex-1 p-6 space-y-4">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 w-full">
               <div className="flex flex-col gap-2">
                 <label htmlFor="" className="text-zinc-700 font-bold">
                   First Name
@@ -167,7 +169,7 @@ export default function FreeTrialPage() {
               <button className="btn-blue mx-auto mt-8">Send</button>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </section>
     </main>
   );

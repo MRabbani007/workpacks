@@ -37,7 +37,9 @@ export default function Navbar() {
         </div>
         <div className="hidden lg:flex items-center gap-4">
           <button className="btn-blue">Login</button>
-          <button className="btn-blue">Book a Demo</button>
+          <Link href={"/#demo"} className="btn-blue">
+            Book a Demo
+          </Link>
         </div>
         <MobileMenu />
       </Wrapper>

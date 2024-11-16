@@ -121,7 +121,9 @@ export default function Home() {
               productive projects
             </p>
             <div className="my-6 flex flex-wrap gap-4 justify-center">
-              <button className="btn-blue">Book Your Demo</button>
+              <Link href={"/#demo"} className="btn-blue">
+                Book Your Demo
+              </Link>
               <button className="btn-blue">
                 Access our Award wining case study
               </button>
@@ -161,7 +163,13 @@ export default function Home() {
               establishing a successful AWP program is not just achievable but
               also straightforward.
             </p>
-            <button className="btn-blue mx-auto lg:mx-none">Watch More</button>
+            <Link
+              href={"https://www.youtube.com/@WorkPacks"}
+              target="_blank"
+              className="btn-blue mx-auto lg:mx-none"
+            >
+              Watch More
+            </Link>
           </div>
         </Wrapper>
       </section>
@@ -190,7 +198,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div>
+          <div className="flex flex-col gap-6">
             <p className="text-sky-950 text-center">
               WorkPacks Delta comes with a configurable{" "}
               <span className="p-2 bg-sky-900 text-white font-medium text-nowrap">
@@ -198,6 +206,9 @@ export default function Home() {
               </span>{" "}
               for your capital project(s)
             </p>
+            <Link href={"/solutions/delta"} className="btn-blue w-fit mx-auto">
+              Learn More
+            </Link>
           </div>
         </Wrapper>
       </section>
