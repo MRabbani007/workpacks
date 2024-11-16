@@ -58,7 +58,7 @@ export default function MobileMenu() {
             expand={expand}
             setExpand={setExpand}
             setShow={setShow}
-            children={SOLUTION_MENU}
+            items={SOLUTION_MENU}
           />
           <Link
             href="/customers"
@@ -69,7 +69,7 @@ export default function MobileMenu() {
           </Link>
           <Submenu
             label="Resources"
-            children={RESOURCE_DROPDOWN}
+            items={RESOURCE_DROPDOWN}
             index={2}
             expand={expand}
             setShow={setShow}
@@ -77,7 +77,7 @@ export default function MobileMenu() {
           />
           <Submenu
             label="News"
-            children={NEWS_DROPDOWN}
+            items={NEWS_DROPDOWN}
             index={3}
             expand={expand}
             setShow={setShow}
@@ -85,7 +85,7 @@ export default function MobileMenu() {
           />
           <Submenu
             label="Company"
-            children={COMPANY_DROPDOWN}
+            items={COMPANY_DROPDOWN}
             index={4}
             expand={expand}
             setShow={setShow}
@@ -99,14 +99,14 @@ export default function MobileMenu() {
 
 const Submenu = ({
   label,
-  children,
+  items,
   expand,
   index,
   setExpand,
   setShow,
 }: {
   label: string;
-  children?: DROPDOWN_ITEM[];
+  items?: DROPDOWN_ITEM[];
   expand: number;
   index: number;
   setExpand: Dispatch<SetStateAction<number>>;
@@ -123,15 +123,15 @@ const Submenu = ({
           className={(expand === index ? "rotate-90" : "") + " duration-200"}
         />
       </button>
-      {children && (
+      {items && (
         <div
           className={
             (expand === index
-              ? `h-[${children.length * 40}px]`
+              ? `h-[${items.length * 40}px]`
               : "h-0 invisible opacity-0") + " flex flex-col duration-200"
           }
         >
-          {children.map((item, idx) => (
+          {items.map((item, idx) => (
             <Link
               href={item.url}
               key={idx}
