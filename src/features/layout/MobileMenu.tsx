@@ -4,7 +4,7 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { FaChevronRight, FaTimes } from "react-icons/fa";
 import Link from "next/link";
-import { DROPDOWN_ITEM } from "../../types";
+import { DROPDOWN_ITEM } from "../../../types";
 import { COMPANY_DROPDOWN, NEWS_DROPDOWN, RESOURCE_DROPDOWN } from "@/lib/data";
 
 const SOLUTION_MENU = [

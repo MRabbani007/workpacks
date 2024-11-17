@@ -1,6 +1,9 @@
 import Wrapper from "@/features/Wrapper";
+import FormLearnMore from "@/features/forms/FormLearnMore";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaUsers } from "react-icons/fa";
 
 export default function PartnerShipsPage() {
   return (
@@ -58,6 +61,88 @@ export default function PartnerShipsPage() {
               achieve more successful outcomes.
             </p>
           </div>
+        </Wrapper>
+      </section>
+      <section className="min-h-screen bg-sky-700 flex items-center py-10">
+        <Wrapper>
+          <div className="flex items-start gap-8">
+            <div className="flex-1 flex items-center justify-center">
+              <div className="relative size-[200px]">
+                <Image
+                  src="/AWP_University_logo.jpg"
+                  alt="AWP University"
+                  fill
+                  className="object-cover inset-0"
+                />
+              </div>
+            </div>
+            <div className="flex-1 space-y-6">
+              <p className="text-4xl font-bold">AWP Training</p>
+              <p>
+                As an integral component of the Jovian Ventures ecosystem, AWP
+                University collaborates closely with WorkPacks, complementing
+                its advanced work packaging solutions. AWP University offers
+                both direct-to-consumer and corporate training solutions, being
+                the first to introduce genuine role-based AWP training within
+                the industry. As a leading provider of comprehensive AWP
+                awareness training, AWP University uniquely caters to the
+                individual needs of each participant.
+              </p>
+              <Link
+                href="https://ccteglobal.com"
+                className="btn-blue inline-block"
+                target="_blank"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+          <div className="mt-8 flex gap-8">
+            <div className="border-2 border-white p-6 bg-sky-400/30">
+              <p className="text-3xl font-semibold mb-6">Role-Based Mastery</p>
+              <p>
+                AWP University's industry-leading role-based training through
+                modularized program, features over 60 modules tailored to
+                specific roles within AWP implementation. The learning paths are
+                designed to address individual needs, equipping students with
+                in-depth knowledge on how to apply AWP principles in their
+                professional roles.
+              </p>
+            </div>
+            <div className="border-2 border-white p-6 bg-sky-400/30">
+              <p className="text-3xl font-semibold mb-6">
+                Comprehensive AWP Training
+              </p>
+              <p>
+                AWP University offers personalized and corporate AWP training
+                solutions to drive career advancement and enhance corporate
+                learning programs. Drawing from 20 years of AWP implementation
+                expertise, our course materials act as the ultimate AWP Rosetta
+                Stone, unlocking success for individuals and organizations
+                alike.
+              </p>
+            </div>
+          </div>
+        </Wrapper>
+      </section>
+      <section className="min-h-screen flex items-center">
+        <Wrapper>
+          <p className="text-indigo-900 text-center text-4xl font-semibold">
+            OUR PARTNERS
+          </p>
+          <FaUsers size={50} className="text-sky-900 mx-auto mt-4" />
+          <p className="text-zinc-800 text-2xl mt-6 text-center">
+            WorkPacks proudly partners with innovative leaders in advanced work
+            packaging and lean industry to revolutionize capital delivery
+          </p>
+        </Wrapper>
+      </section>
+      <section id="learn_more" className="min-h-screen bg-sky-700 py-20">
+        <Wrapper>
+          <p className="text-4xl font-bold text-center">
+            Learn More from Our Experts
+          </p>
+          <FormLearnMore />
         </Wrapper>
       </section>
     </main>

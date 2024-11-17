@@ -5,7 +5,7 @@ import React from "react";
 export default function FreeTrialPage() {
   return (
     <main>
-      <section className="py-20 min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-900 to-sky-950 relative overflow-x-clip">
+      <section className="py-32 min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-900 to-sky-950 relative overflow-x-clip">
         <div className="wave absolute left-0 right-0 bottom-0 min-w-[1000px] bg-zinc-200 z-10 h-10" />
         <Wrapper className="text-center">
           <p className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">

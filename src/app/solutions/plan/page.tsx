@@ -10,7 +10,7 @@ import React from "react";
 
 export default function WorkpacksPlanPage() {
   return (
-    <main className="space-y-0">
+    <main className="space-y-0 bg-zinc-300">
       <SolutionsHero
         title="WorkPacks Plan™"
         subtitle="KICK-OFF your AWP plan in 1D and 2D!"

@@ -20,7 +20,9 @@ export default function DropDownWP() {
       </Link>
       <div
         className={
-          (show ? "" : "-translate-y-4 opacity-0 ") +
+          (show
+            ? ""
+            : "-translate-y-4 opacity-0 invisible pointer-events-none ") +
           " absolute top-full left-1/2 -translate-x-1/2 w-[80vw] grid grid-cols-4 gap-6 bg-zinc-50 shadow-md shadow-zinc-900 p-6 duration-200"
         }
       >

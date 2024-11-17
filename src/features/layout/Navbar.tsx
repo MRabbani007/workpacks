@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Wrapper from "./Wrapper";
+import Wrapper from "../Wrapper";
 import DropDown from "./DropDown";
 import MobileMenu from "./MobileMenu";
 import { COMPANY_DROPDOWN, NEWS_DROPDOWN, RESOURCE_DROPDOWN } from "@/lib/data";
@@ -33,7 +33,7 @@ export default function Navbar() {
           </Link>
           <DropDown trigger="Resources" items={RESOURCE_DROPDOWN} />
           <DropDown trigger="News" items={NEWS_DROPDOWN} />
-          <DropDown trigger="Resources" items={COMPANY_DROPDOWN} />
+          <DropDown trigger="Company" items={COMPANY_DROPDOWN} />
         </div>
         <div className="hidden lg:flex items-center gap-4">
           <button className="btn-blue">Login</button>

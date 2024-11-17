@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Wrapper from "./Wrapper";
+import Wrapper from "../Wrapper";
 import Link from "next/link";
 
 export default function Footer() {

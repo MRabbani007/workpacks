@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { DROPDOWN_ITEM } from "../../types";
+import { DROPDOWN_ITEM } from "../../../types";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -16,16 +16,18 @@ export default function DropDown({
   return (
     <div className="relative" onMouseLeave={() => setShow(false)}>
       <button
-        className=" flex items-center gap-2 py-2"
+        className=" flex items-center gap-2 py-2 hover:text-orange-300"
         // onClick={() => setShow((curr) => !curr)}
         onMouseEnter={() => setShow(true)}
       >
-        {trigger}
+        <span className="">{trigger}</span>
         <FaChevronDown size={10} className="text-blue-400" />
       </button>
       <div
         className={
-          (show ? "" : "-translate-y-4 opacity-0 ") +
+          (show
+            ? ""
+            : "-translate-y-4 opacity-0 invisible pointer-events-none ") +
           " absolute top-full left-0 flex flex-col bg-zinc-50 duration-200"
         }
       >

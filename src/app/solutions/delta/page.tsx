@@ -10,7 +10,7 @@ import React from "react";
 
 export default function WorkpacksDeltaPage() {
   return (
-    <main className="space-y-0">
+    <main className="space-y-0 bg-zinc-300">
       <SolutionsHero
         title="WorkPacks Delta™"
         subtitle="Interfacing with EPC Systems through Digital Threads"

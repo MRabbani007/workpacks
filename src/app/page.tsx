@@ -1,4 +1,5 @@
 import Accordion from "@/features/Accordion";
+import BannerWave from "@/features/BannerWave";
 import CardStatistics from "@/features/CardStatistics";
 import CardStatisticsContainer from "@/features/CardStatisticsContainer";
 import SectionFreeDemo from "@/features/SectionFreeDemo";
@@ -71,9 +72,7 @@ const items = [
 export default function Home() {
   return (
     <main className="">
-      <section className="min-h-[90vh] bg-gradient-to-b from-sky-900 to-sky-950 flex items-center justify-center pt-32 relative z-0 overflow-x-clip">
-        <div className="wave absolute left-0 right-0 bottom-0 min-w-[1000px] bg-white z-10 h-10" />
-        <div className="absolute opacity-40 top-[100px] left-[30vw] size-[50px] bg-gradient-to-br from-indigo-600/30 to-indigo-500/10 shadow-[0_0_200px_50px] shadow-indigo-600 z-20 rounded-full" />
+      <BannerWave>
         <Wrapper className="flex items-center justify-center gap-6 h-full flex-col lg:flex-row z-20">
           <div className="flex-1 space-y-6">
             <p className="sm:text-5xl md:text-6xl text-4xl font-extrabold">
@@ -100,7 +99,7 @@ export default function Home() {
             />
           </div>
         </Wrapper>
-      </section>
+      </BannerWave>
       <section className="flex items-center justify-center py-14 gap-6">
         <Wrapper className="flex items-stretch gap-8 flex-col lg:flex-row">
           <div className="p-8 w-full lg:w-[400px] shadow-md shadow-zinc-600 flex flex-col items-center justify-center">
